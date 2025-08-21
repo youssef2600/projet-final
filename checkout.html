@@ -71,6 +71,14 @@
           <h2>Shipping Information</h2>
           <label>Name:<br /><input type="text" required /></label><br />
           <label>Email:<br /><input type="email" required /></label><br />
+          <label>Phone Number</label><br /><input
+            type="tel"
+            id="phoneNumber"
+            placeholder="phone number"
+            name="phoneNumber"
+            pattern="[0-9]+"
+            title="Please enter a positive phone number (digits only)"
+          /><br
           <label>Address:<br /><textarea required></textarea></label><br />
           <label
             >Payment Method:<br />
@@ -102,7 +110,9 @@
         .getElementById("checkout-form")
         .addEventListener("submit", (e) => {
           e.preventDefault();
-          alert("✅ Order placed successfully!");
+          alert(
+            "✅ Order placed successfully! we will contact you soon, thank you for shopping with us."
+          );
           localStorage.removeItem("cart"); // clear after checkout
           window.location.href = "index.html";
         });
