@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Add to cart
   document.querySelectorAll(".add").forEach((btn) => {
     btn.addEventListener("click", (e) => {
+      alert("added to cart");
       const productCard = e.target.closest(".item");
       const name = productCard.querySelector("p").textContent;
       const priceText = productCard
