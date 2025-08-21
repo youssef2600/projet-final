@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav id="top">
+      <a href="index.html" id="logo">
+        <img src="logo.png" alt="Website Logo" />
+      </a>
+      <div class="navitems">
+        <a href="products.html">All</a>
+        <a href="products.html">Shoes</a>
+        <a href="products.html">Pants</a>
+        <a href="products.html">Shorts</a>
+        <a href="products.html">Shirts</a>
+        <a href="products.html">Jackets</a>
+        <a href="products.html">Accessories</a>
+      </div>
+      <!-- Hide cart on checkout -->
+      <div id="cart-icon" style="display: none"></div>
+    </nav>
+
+    <main class="checkout-page" style="padding: 2rem">
+      <h1>Checkout</h1>
+      <div
+        class="checkout-container"
+        style="
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 2rem;
+          margin-top: 2rem;
+        "
+      >
+        <!-- Order Summary -->
+        <div
+          class="order-summary"
+          style="
+            background: var(--color-card);
+            padding: 1.5rem;
+            border-radius: 12px;
+          "
+        >
+          <h2>Your Order</h2>
+          <div id="order-summary"></div>
+          <h3
+            id="order-total"
+            style="margin-top: 1rem; color: var(--color-accent)"
+          ></h3>
+          <a
+            href="products.html"
+            class="btn-primary"
+            style="margin-top: 1rem; display: inline-block"
+            >← Back to Shopping</a
+          >
+        </div>
+
+        <!-- Checkout Form -->
+        <form
+          id="checkout-form"
+          style="
+            background: var(--color-card);
+            padding: 1.5rem;
+            border-radius: 12px;
+          "
+        >
+          <h2>Shipping Information</h2>
+          <label>Name:<br /><input type="text" required /></label><br />
+          <label>Email:<br /><input type="email" required /></label><br />
+          <label>Address:<br /><textarea required></textarea></label><br />
+          <label
+            >Payment Method:<br />
+            <select required>
+              <option value="card">Credit Card</option>
+              <option value="paypal">PayPal</option>
+              <option value="cod">Cash on Delivery</option>
+            </select> </label
+          ><br />
+          <button
+            type="submit"
+            class="btn-primary"
+            style="width: 100%; margin-top: 1rem"
+          >
+            Place Order
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Your Store. All rights reserved.</p>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script>
+      // Submit checkout
+      document
+        .getElementById("checkout-form")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          alert("✅ Order placed successfully!");
+          localStorage.removeItem("cart"); // clear after checkout
+          window.location.href = "index.html";
+        });
+    </script>
+  </body>
+</html>

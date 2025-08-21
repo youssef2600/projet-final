@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav id="top">
+      <a href="index.html" id="logo">
+        <img src="logo.png" alt="Website Logo" />
+      </a>
+      <div class="navitems">
+        <a href="products.html" id="all">all</a>
+        <a href="products.html" id="shoes">Shoes</a>
+        <a href="products.html" id="pants">Pants</a>
+        <a href="products.html" id="shorts">Shorts</a>
+        <a href="products.html" id="shirts">Shirts</a>
+        <a href="products.html" id="jackets">Jackets</a>
+        <a href="products.html" id="accessories">Accessories</a>
+      </div>
+      <!-- Cart Icon -->
+      <div id="cart-icon">
+        <img src="cart.png" alt="Cart" />
+        <span id="cart-count">0</span>
+      </div>
+    </nav>
+    <!-- Shopping Cart Sidebar -->
+    <div id="cart-sidebar">
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <div class="cart-footer">
+        <p>Total: <span id="cart-total">0 dt</span></p>
+        <button id="checkout-btn">Checkout</button>
+        <button id="close-cart">Close</button>
+      </div>
+    </div>
+    <!-- Products Section -->
+    <main class="products-page">
+      <h1 id="title">All Products</h1>
+      <div class="products-grid">
+        <!-- Product Card -->
+        <div class="item">
+          <a href="product_page.html" class="shoe1">
+            <img src="images/shoes/sho1/shoe1.webp" alt="" />
+            <p>the original adidas samba in a fair condition size 38</p>
+            <h2 class="price">70 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="shoe2">
+            <img src="images/shoes/sho2/shoe2.webp" alt="" />
+            <p>vintage nike grey and white with red details shoe size 44</p>
+            <h2 class="price"></h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="shoe3">
+            <img src="images/shoes/sho3/shoe3.webp" alt="" />
+            <p>vintage nike red and grey shoe size 42</p>
+            <h2 class="price">180 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="shoe4">
+            <img src="images/shoes/sho4/shoe4.jpg" alt="" />
+            <p>asecs iconic design shoe size 46</p>
+            <h2 class="price">160 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="j1">
+            <img
+              src="images/jackets/j1/j1.jpeg"
+              alt="Vintage Carhartt Jacket"
+            />
+            <p>Vintage Carhartt jacket in good condition, hardly ever worn</p>
+            <h2 class="price">250 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="j2">
+            <img src="images/jackets/j2/j2.jpeg" alt="Green Carhartt Jacket" />
+            <p>Vintage green Carhartt jacket in good condition and clean</p>
+            <h2 class="price">150 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="j3">
+            <img src="images/jackets/j3/j3.webp" alt="Nike Zip-Up Jacket" />
+            <p>Vintage Nike zip-up jacket in brand new condition</p>
+            <h2 class="price">200 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="j4">
+            <img src="images/jackets/j4/j4.webp" alt="Leather Jacket" />
+            <p>Old school leather jacket with cool design in mint condition</p>
+            <h2 class="price">120 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="s1">
+            <img src="images/shorts/s1/s1.jpeg" alt="Casual Shorts" />
+            <p>baggy grey jorts with full drawn design, new condition</p>
+            <h2 class="price">60 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="s2">
+            <img src="images/shorts/s2/s2.jpeg" alt="Denim Shorts" />
+            <p>Classic denim shorts, slightly worn, vintage look, loose fit</p>
+            <h2 class="price">80 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="s3">
+            <img src="images/shorts/s3/s3.webp" alt="Black Sports Shorts" />
+            <p>
+              blue grayish jorts with a simple stitched design in a fair
+              condition
+            </p>
+            <h2 class="price">50 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="s4">
+            <img src="images/shorts/s4/s4.webp" alt="Cargo Shorts" />
+            <p>
+              black baggy jorts with a simple printed design in good condition
+            </p>
+            <h2 class="price">70 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="shi1">
+            <img src="images/shirts/shi1/hood.webp" alt="" />
+            <p>Brown old school xl nike hoodie in a pretty good condition</p>
+            <h2 class="price">80 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="shi2">
+            <img src="images/shirts/shi2/hood 1 2.webp" alt="" />
+            <p>Green one of one large nike hoodie in perfect condition</p>
+            <h2 class="price">190 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="shi3">
+            <img src="images/shirts/shi3/t.webp" alt="" />
+            <p>blue striped medium nike t-shirt in a good condition</p>
+            <h2 class="price">100 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="shi4">
+            <img src="images/shirts/shi4/shirt.webp" alt="" />
+            <p>green old school large nike hoodie in a pretty good condition</p>
+            <h2 class="price">120 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="p1">
+            <img src="images/pants/p1/pant1.webp" alt="" />
+            <p>iconic nike blue baggy track pants in perfect condition</p>
+            <h2 class="price">90 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="p2">
+            <img src="images/pants/p2/p2.webp" alt="" />
+            <p>limited edition nike baggy jeans in mint condition</p>
+            <h2 class="price">250 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="p3">
+            <img src="images/pants/p3/p3.webp" alt="" />
+            <p>Vintage Ice Pole Jeans Mens 34x29.5 Black Denim Wide Leg</p>
+            <h2 class="price">200 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="p4">
+            <img src="images/pants/p4/p42.webp" alt="" />
+            <p>
+              Carhartt Relaxed Fit 40x30 Blue Jeans 100% Cotton in good
+              condition
+            </p>
+            <h2 class="price">60 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="bag">
+            <img src="images/accessories/bag/bag.webp" alt="Bag" />
+            <p>Vintage nike cross body bag in an almost perfect condition</p>
+            <h2 class="price">120 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="belt">
+            <img src="images/accessories/belt/belt.webp" alt="Belt" />
+            <p>black leather dieseil belt wth silver buckle</p>
+            <h2 class="price">100 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="ring">
+            <img src="images/accessories/ring/ring.webp" alt="Silver Ring" />
+            <p>mf doom ring in stainless steel whith an adjustable size</p>
+            <h2 class="price">60 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="bracelet">
+            <img
+              src="images/accessories/bracelet/bracelet.avif"
+              alt="Bracelet"
+            />
+            <p>Handmade chain bracelet with a unique design</p>
+            <h2 class="price">35 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="shi5">
+            <img src="images/shirts/shi5/s.webp" alt="shirt" />
+            <p>nike baggy old vintage shirt large in good condition</p>
+            <h2 class="price">30 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <div class="item">
+          <a href="product_page.html" class="watch">
+            <img src="images/accessories/watch/watch.webp" alt="watch" />
+            <p>vintage casio watch</p>
+            <h2 class="price">60 dt</h2>
+          </a>
+          <button class="add">
+            <img src="cart.png" alt="Add to cart" />
+          </button>
+        </div>
+        <!-- Add more products here -->
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Your Store. All rights reserved.</p>
+    </footer>
+    <script src="random.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>
