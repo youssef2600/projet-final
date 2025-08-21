@@ -14,12 +14,12 @@
       </a>
       <div class="navitems">
         <a href="products.html" id="all">all</a>
-        <a href="products.html" id="shoes">Shoes</a>
-        <a href="products.html" id="pants">Pants</a>
-        <a href="products.html" id="shorts">Shorts</a>
-        <a href="products.html" id="shirts">Shirts</a>
-        <a href="products.html" id="jackets">Jackets</a>
-        <a href="products.html" id="accessories">Accessories</a>
+        <a href="products.html" id="Shoes">Shoes</a>
+        <a href="products.html" id="Pants">Pants</a>
+        <a href="products.html" id="Shorts">Shorts</a>
+        <a href="products.html" id="Shirts">Shirts</a>
+        <a href="products.html" id="Jackets">Jackets</a>
+        <a href="products.html" id="Accessories">Accessories</a>
       </div>
       <!-- Cart Icon -->
       <div id="cart-icon">
@@ -337,41 +337,65 @@
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const navLinks = document.querySelectorAll(".navitems a");
-        const title = document.getElementById("title");
+        const titleElement = document.getElementById("title");
         const products = document.querySelectorAll(".products-grid .item");
 
-        // Function to filter products by class
-        function filterProducts(category) {
+        // Function to filter products - hide all items that don't have the matching class
+        function filterProducts(selectedClass) {
           products.forEach((product) => {
-            if (category === "all" || product.classList.contains(category)) {
+            // If "all" is selected, show all products
+            if (selectedClass === "all") {
               product.style.display = "block";
-            } else {
+            }
+            // Only show products that have the exact matching class
+            else if (product.classList.contains(selectedClass)) {
+              product.style.display = "block";
+            }
+            // Hide all products that don't have the matching class
+            else {
               product.style.display = "none";
             }
           });
 
-          // Update title
-          title.textContent =
-            category === "all"
-              ? "All Products"
-              : category.charAt(0).toUpperCase() + category.slice(1);
+          // Update page title based on selected filter
+          titleElement.textContent =
+            selectedClass === "all" ? "All Products" : selectedClass;
         }
 
-        // Detect category from URL (for navigation persistence)
+        // Check URL parameters on page load
         const params = new URLSearchParams(window.location.search);
-        const currentCategory = params.get("category");
-        if (currentCategory) {
-          filterProducts(currentCategory);
+        const currentFilter = params.get("filter");
+        if (currentFilter) {
+          filterProducts(currentFilter);
+          // Highlight active nav link
+          const activeLink = document.getElementById(currentFilter);
+          if (activeLink) {
+            activeLink.style.fontWeight = "bold";
+            activeLink.style.color = "#007bff";
+          }
         }
 
-        // Add click events to nav links
+        // Add click event listeners to navigation links
         navLinks.forEach((link) => {
           link.addEventListener("click", (e) => {
             e.preventDefault();
-            const category = link.id; // nav link IDs match category names
-            filterProducts(category);
-            // Update URL without reloading
-            history.pushState({}, "", `?category=${category}`);
+
+            // Remove active styling from all nav links
+            navLinks.forEach((navLink) => {
+              navLink.style.fontWeight = "normal";
+              navLink.style.color = "";
+            });
+
+            // Add active styling to clicked link
+            link.style.fontWeight = "bold";
+            link.style.color = "#007bff";
+
+            // Get the class name from the link's ID and filter products
+            const selectedClass = link.id;
+            filterProducts(selectedClass);
+
+            // Update URL without page reload
+            history.pushState({}, "", `?filter=${selectedClass}`);
           });
         });
       });
